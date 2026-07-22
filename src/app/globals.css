@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-serif: var(--font-playfair), Georgia, serif;
+}
+
+@theme {
+  --color-prune: #2a1f3d;
+  --color-prune-dark: #1a1228;
+  --color-prune-deeper: #0d091a;
+  --color-or: #b8947a;
+  --color-or-light: #d4ad92;
+  --color-ivory: #f5f1ed;
+  --color-lin: #ede8e0;
+  --color-muted: #6a6060;
+  --color-divider: #c8c0b8;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: #f5f1ed;
+  color: #1a1228;
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+}
+
+.hover-or { transition: color 0.2s; }
+.hover-or:hover { color: #b8947a !important; }
+
+.domain-card { transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s; }
+.domain-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(13,9,26,0.22);
+}
+
+.pub-card { transition: box-shadow 0.2s, transform 0.2s; }
+.pub-card:hover {
+  box-shadow: 0 8px 32px rgba(13,9,26,0.14);
+  transform: translateY(-2px);
+}
+
+@keyframes kenBurns {
+  0%   { transform: scale(1)    translateX(0)    translateY(0); }
+  50%  { transform: scale(1.05) translateX(-1%)  translateY(-0.5%); }
+  100% { transform: scale(1)    translateX(0)    translateY(0); }
+}
+.ken-burns { animation: kenBurns 20s ease-in-out infinite; }
