@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 export default function About() {
   return (
     <section id="cabinet" className="py-24" style={{ background: '#f5f1ed' }}>
@@ -17,8 +15,21 @@ export default function About() {
 
         <div className="flex flex-col sm:flex-row overflow-hidden mb-10"
           style={{ background: '#fff', border: '1px solid #c8c0b8', boxShadow: '0 2px 16px rgba(13,9,26,0.07)' }}>
-          <div className="relative flex-shrink-0" style={{ width: '300px', minHeight: '380px' }}>
-            <Image src="/drechou.png" alt="Maître Julia Drechou" fill className="object-cover object-top" />
+          <div className="flex-shrink-0 flex items-center justify-center" style={{ width: '300px', minHeight: '380px', background: '#2a1f3d' }}>
+            <div style={{
+              width: '130px', height: '130px',
+              border: '1.5px solid rgba(184,148,122,0.55)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+            }}>
+              <span style={{
+                fontFamily: 'var(--font-playfair)',
+                fontSize: '2.2rem',
+                fontStyle: 'italic',
+                fontWeight: 400,
+                color: '#b8947a',
+                letterSpacing: '0.05em',
+              }}>JDA</span>
+            </div>
           </div>
           <div className="flex flex-col justify-center p-8 lg:p-12">
             <p className="text-xs uppercase tracking-widest mb-1" style={{ color: '#6a6060' }}>Avocate au Barreau de Bordeaux</p>
